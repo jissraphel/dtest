@@ -4,8 +4,13 @@
 <h1>Restaurants List</h1>
 
 <ul>
-	{% for obj in abc %}
-	{{obj}}
+	{% for obj in object_list %}
+
+	
+	<a href='{{obj.get_absolute_url}}'>{{obj}}</a>
+	 {{obj.location}}  {{obj.category}} 
+	 {{obj.slug}} {{obj.timestamp}}  {{obj.updated}}</li><br/>
+
 	{% endfor %}
 
 </ul>
